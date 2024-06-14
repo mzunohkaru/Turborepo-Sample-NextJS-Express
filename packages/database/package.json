@@ -1,0 +1,26 @@
+{
+  "name": "@repo/database",
+  "version": "0.0.0",
+  "private": "true",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "db:generate": "pnpm dlx prisma generate",
+    "db:seed": "ts-node src/seed.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "prisma": "^5.13.0",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.13.0",
+    "@types/node": "^20.11.17"
+  }
+}
