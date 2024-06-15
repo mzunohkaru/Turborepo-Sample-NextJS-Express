@@ -1,3 +1,2 @@
-import { UserResponse } from "./user";
-
-export { UserResponse };
+export { UserResponse } from "./user";
+export { PostResponse } from "./post";
