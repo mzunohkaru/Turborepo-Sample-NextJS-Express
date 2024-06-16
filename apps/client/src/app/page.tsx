@@ -1,11 +1,18 @@
-import Image from "next/image";
+"use client";
 
 import { CustomLink } from "@/components/Link";
 import { Footer } from "@/components/Footer";
+import { usePokemon } from "@/hook/use-pokemon";
 
-const url = "http://localhost:3000/api/user";
+export default function Home() {
+  const { data, error, trigger, triggerData } = usePokemon();
+  console.log("SWR", data);
 
-export default async function Home() {
+  const handlePokemon = async () => {
+    await trigger();
+    console.log("triggerData", triggerData);
+  };
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
@@ -14,6 +21,10 @@ export default async function Home() {
           <code className="font-mono font-bold">src/app/page.tsx</code>
         </p>
       </div>
+
+      <button onClick={handlePokemon}>
+        Trigger
+      </button>
 
       <Footer />
 

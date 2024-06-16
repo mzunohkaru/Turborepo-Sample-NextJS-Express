@@ -9,17 +9,18 @@ const prisma = new PrismaClient();
 const router = Router();
 
 router.get("/", async (req: Request, res: Response) => {
-  try {
-    const users = await prisma.user.findMany({
-      include: {
-        posts: true,
-      },
-    });
-    res.status(200).json(users);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ message: "Internal Server Error" });
-  }
+  res.status(200).json({ user: "Tanaka", age: 24 });
+  // try {
+  //   const users = await prisma.user.findMany({
+  //     include: {
+  //       posts: true,
+  //     },
+  //   });
+  //   res.status(200).json(users);
+  // } catch (error) {
+  //   console.log(error);
+  //   res.status(500).json({ message: "Internal Server Error" });
+  // }
 });
 
 router.delete("/", async (req: Request, res: Response) => {
