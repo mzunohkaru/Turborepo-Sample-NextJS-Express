@@ -2,15 +2,15 @@
 
 import { CustomLink } from "@/components/Link";
 import { Footer } from "@/components/Footer";
-import { usePokemon } from "@/hook/use-pokemon";
+import { useUser } from "@/hook/use-user";
 
 export default function Home() {
-  const { data, error, trigger, triggerData } = usePokemon();
-  console.log("SWR", data);
+  const { userData, error } = useUser();
+  console.log("SWR", userData);
 
   const handlePokemon = async () => {
-    await trigger();
-    console.log("triggerData", triggerData);
+    // await trigger();
+    // console.log("triggerData", triggerData);
   };
 
   return (

@@ -19,8 +19,7 @@
     "format:fix": "turbo format:fix",
     "db:deploy": "turbo db:deploy",
     "db:generate": "turbo db:generate",
-    "db:studio": "turbo db:studio",
-    "db:seed": "turbo db:seed"
+    "db:studio": "turbo db:studio"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

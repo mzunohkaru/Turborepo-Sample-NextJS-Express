@@ -2,8 +2,7 @@ import useSWR from "swr";
 import useSWRMutation from "swr/mutation";
 import axios from "axios";
 
-// const url = "https://pokeapi.co/api/v2/pokemon";
-const url = "http://localhost:8080/api/user";
+const url = "https://pokeapi.co/api/v2/pokemon";
 
 const fetcher = async (url: string) => {
   const res = await axios.get(url);

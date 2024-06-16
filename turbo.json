@@ -13,6 +13,31 @@
         "!.next/cache/**"
       ]
     },
+    "docker:db": {
+      "dependsOn": [
+        "^docker:db"
+      ]
+    },
+    "check": {
+      "dependsOn": [
+        "^check"
+      ]
+    },
+    "db:deploy": {
+      "dependsOn": [
+        "^db:deploy"
+      ]
+    },
+    "db:generate": {
+      "dependsOn": [
+        "^db:generate"
+      ]
+    },
+    "tsc": {
+      "dependsOn": [
+        "^tsc"
+      ]
+    },
     "lint": {
       "dependsOn": [
         "^lint"
