@@ -1,10 +1,8 @@
 import { Router, Request, Response } from "express";
 
 import { UserResponse } from "@repo/schema/src/user";
-// import prisma from "@repo/database";
-import { PrismaClient } from "@prisma/client";
 
-const prisma = new PrismaClient();
+import prisma from "@repo/database/src/index";
 
 const router = Router();
 
